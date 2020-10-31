@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View,SafeAreaView,Image} from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import { BASE_URL } from 'src/constant/api';
 
 export default class LandingScreen extends Component {
   
@@ -14,27 +13,27 @@ export default class LandingScreen extends Component {
       {
           title:"Lux",
           text: "Text 1",
-          src : BASE_URL+"/static/img/category/images/nia.webp"
+          src : "http://192.168.43.239:8000"+"/static/img/category/images/nia.webp"
       },
       {
           title:"Paneer",
           text: "Text 2",
-          src : BASE_URL+"/static/img/category/images/foody.jpg"
+          src : "http://192.168.43.239:8000"+"/static/img/category/images/foody.jpg"
       },
       {
           title:"Tomato",
           text: "Text 3",
-          src : BASE_URL+"/static/img/products/images/61DlqYmSLOL._SL1024_.jpg"
+          src : "http://192.168.43.239:8000"+"/static/img/products/images/61DlqYmSLOL._SL1024_.jpg"
       },
       {
           title:"Rice",
           text: "Text 4",
-          src : BASE_URL+"/static/img/category/images/nia.webp"
+          src : "http://192.168.43.239:8000"+"/static/img/category/images/nia.webp"
       },
       {
           title:"Shop",
           text: "Text 5",
-          src : BASE_URL"/static/img/products/images/storediagram.gif"
+          src : "http://192.168.43.239:8000"+"/static/img/products/images/storediagram.gif"
       },
     ]
   }

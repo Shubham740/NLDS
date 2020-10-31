@@ -13,7 +13,7 @@ import ConsultancyScreen from '../consultancy';
 import ServicesScreen from '../services'
 import CategoryProductsScreen from '../category products'
 import Product from '../product'
-
+import LoginScreen from '../login/index'
 import {
   Image,
   SafeAreaView,
@@ -66,7 +66,9 @@ render(){
   
   return (
      <NavigationContainer>
-      <Drawer.Navigator initialRouteName="NeedLife Store">
+      <Drawer.Navigator initialRouteName="LoginScreen">
+      <Drawer.Screen name="LoginScreen" component={LoginScreen} />
+
         <Drawer.Screen name="NeedLife Store" component={HomeScreen} />
         <Drawer.Screen name="Categories" component={CategoriesScreen} />
         <Drawer.Screen name="Services" component={ServicesScreen} />
