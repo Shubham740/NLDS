@@ -23,6 +23,35 @@ const styles = StyleSheet.create({
         marginLeft:12,
         fontFamily:fonts.regular,
         marginTop:24
+    },
+    buttonStyle:{
+        backgroundColor:'#F27113',
+        width: 306,
+        height: 52,
+        alignSelf:'center',
+        marginTop:40,
+        borderRadius:5,
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    loginTextStyle:{
+        fontSize:16,
+        fontFamily:fonts.bold,
+        color:'white'
+    },
+    firstTimeUserTextStyle:{
+        fontSize:12,
+        fontFamily:fonts.regular,
+        alignSelf:'center',
+        marginTop:34
+    },
+    signUpHereTextStyle:{
+        fontSize:17,
+        fontFamily:fonts.bold,
+        alignSelf:'center',
+    },
+    signUpHereTouchableStyle:{
+        padding:10
     }
 })
 export default styles;

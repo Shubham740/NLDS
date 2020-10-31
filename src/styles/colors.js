@@ -1,4 +1,4 @@
-export const PRIMARY = '#FF8C00';
+export const PRIMARY = '#F27113';
 export const SECONDARY = '#FFA500';
 export const THIRD = '#FFD700';
 
