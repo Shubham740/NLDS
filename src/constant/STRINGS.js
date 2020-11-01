@@ -9,6 +9,10 @@ const STRINGS={
     PLEASE_ENTER_VALID_PHONE_NUMBER:'Please enter valid phone number',
     PLEASE_PROVIDE_THE_INTERNET_CONNECTION:'Please provide the internet connection',
     SERVER_ERROR:'Server Error',
-    COMING_SOON:'Coming soon'
+    COMING_SOON:'Coming soon',
+    VERIFICATION:'Verification',
+    ENTER_FOUR_DIGIT_VERIFICATION:'Enter 4 digit verification code sent to your Number',
+    VERIFY:'Verify',
+    RESEND_OTP:'Resend Otp'
 }
 export default STRINGS;

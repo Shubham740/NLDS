@@ -1,2 +1,3 @@
 import  ApiHelper from './ApiHelper'
-export {ApiHelper};
+import * as Utils from './Utils'
+export {ApiHelper,Utils};

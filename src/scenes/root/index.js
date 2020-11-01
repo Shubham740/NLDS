@@ -14,6 +14,7 @@ import ServicesScreen from '../services'
 import CategoryProductsScreen from '../category products'
 import Product from '../product'
 import LoginScreen from '../login/LoginScreen'
+import OtpVerification from '../otpVerify/OtpVerification'
 import {
   Image,
   SafeAreaView,
@@ -66,8 +67,9 @@ render(){
   
   return (
      <NavigationContainer>
-      <Drawer.Navigator initialRouteName="LoginScreen">
+      <Drawer.Navigator initialRouteName="OtpVerification">
       <Drawer.Screen name="LoginScreen" component={LoginScreen} />
+      <Drawer.Screen name="OtpVerification" component={OtpVerification} />
 
         <Drawer.Screen name="NeedLife Store" component={HomeScreen} />
         <Drawer.Screen name="Categories" component={CategoriesScreen} />
