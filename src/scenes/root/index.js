@@ -13,7 +13,7 @@ import ConsultancyScreen from '../consultancy';
 import ServicesScreen from '../services'
 import CategoryProductsScreen from '../category products'
 import Product from '../product'
-import LoginScreen from '../login/index'
+import LoginScreen from '../login/LoginScreen'
 import {
   Image,
   SafeAreaView,

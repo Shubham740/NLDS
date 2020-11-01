@@ -1,6 +1,6 @@
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
-import HomeScreen from '_scenes/home';
+import Home from '_scenes/home';
 import AboutScreen from '_scenes/about';
 
 const TabNavigatorConfig = {
@@ -11,7 +11,7 @@ const TabNavigatorConfig = {
 
 const RouteConfigs = {
   Home: {
-    screen: HomeScreen,
+    screen: Home,
   },
   About: {
     screen: AboutScreen,
