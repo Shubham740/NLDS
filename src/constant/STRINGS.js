@@ -13,6 +13,7 @@ const STRINGS={
     VERIFICATION:'Verification',
     ENTER_FOUR_DIGIT_VERIFICATION:'Enter 4 digit verification code sent to your Number',
     VERIFY:'Verify',
-    RESEND_OTP:'Resend Otp'
+    RESEND_OTP:'Resend Otp',
+    PLEASE_ENTER_VALID_OTP:'Please enter valid Otp'
 }
 export default STRINGS;

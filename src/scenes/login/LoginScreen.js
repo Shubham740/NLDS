@@ -16,7 +16,7 @@ import STRINGS from '../../constant/STRINGS.js';
 import styles from './LoginStyles';
 const LOGIN_SCREEN_ERROR = 'LoginScreenError=>>>';
 const LOGIN_SCREEN_RESPONSE = 'LoginScreenResponse=>>>>';
-import { StackActions } from '@react-navigation/native';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 export default class LoginScreen extends Component {
   constructor(props) {
@@ -29,7 +29,18 @@ export default class LoginScreen extends Component {
   render() {
     console.log('props=>>', this.props.navigation)
     return (
-      <SafeAreaView style={styles.parentView}>
+      <KeyboardAwareScrollView
+      
+        keyboardShouldPersistTaps="handled"
+        ref={ref => (this.scrollView = ref)}
+        onKeyboardWillHide={frames => {
+          setTimeout(() => {
+            this.scrollView.scrollToPosition(0, 0, false);
+          }, 250);
+        }}
+        style={styles.parentView}
+        extraHeight={120}>
+
         <Image
           style={styles.imageStyle}
           source={img_path.SHOPPING_ICON}
@@ -92,7 +103,7 @@ export default class LoginScreen extends Component {
           }}>
           <Text style={styles.signUpHereTextStyle}>{STRINGS.SIGN_UP_HERE}</Text>
         </TouchableOpacity>
-      </SafeAreaView>
+      </KeyboardAwareScrollView>
     );
   }
   validateForm = () => {
@@ -118,7 +129,9 @@ export default class LoginScreen extends Component {
               if (response != undefined) {
                 if (response.success == true) {
                   SimpleToast.show(response.data.message);
-              this.props.navigation.navigate('NeedLife Store')
+                  this.props.navigation.navigate('OtpVerification',{
+                    phoneNumber:this.state.phoneNumber
+                  })
                 } else {
                   SimpleToast.show(response.errors.message);
                 }

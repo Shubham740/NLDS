@@ -67,7 +67,7 @@ render(){
   
   return (
      <NavigationContainer>
-      <Drawer.Navigator initialRouteName="OtpVerification">
+      <Drawer.Navigator initialRouteName="LoginScreen">
       <Drawer.Screen name="LoginScreen" component={LoginScreen} />
       <Drawer.Screen name="OtpVerification" component={OtpVerification} />
 
