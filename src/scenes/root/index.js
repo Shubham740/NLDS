@@ -49,6 +49,7 @@ import { img_path } from '../../constant/images';
 //declare const global: {HermesInternal: null | {}};
 
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator()
 
 //Define a color for toolbar
 global.backgroundColor = 'red';
@@ -67,20 +68,20 @@ render(){
   
   return (
      <NavigationContainer>
-      <Drawer.Navigator initialRouteName="LoginScreen">
-      <Drawer.Screen name="LoginScreen" component={LoginScreen} />
-      <Drawer.Screen name="OtpVerification" component={OtpVerification} />
+      <Stack.Navigator initialRouteName="LoginScreen">
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="OtpVerification" component={OtpVerification} />
 
-        <Drawer.Screen name="NeedLife Store" component={HomeScreen} />
-        <Drawer.Screen name="Categories" component={CategoriesScreen} />
-        <Drawer.Screen name="Services" component={ServicesScreen} />
-        <Drawer.Screen name="Consultancy" component={ConsultancyScreen} />
-        <Drawer.Screen name="Cart" component={CartScreen} />
-        <Drawer.Screen name="About" component={AboutScreen} />
-        <Drawer.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
-        <Drawer.Screen name="Category Products" component={CategoryProductsScreen} />
-        <Drawer.Screen name="Product" component={Product} />
-      </Drawer.Navigator>
+        <Stack.Screen name="NeedLife Store" component={HomeScreen} />
+        <Stack.Screen name="Categories" component={CategoriesScreen} />
+        <Stack.Screen name="Services" component={ServicesScreen} />
+        <Stack.Screen name="Consultancy" component={ConsultancyScreen} />
+        <Stack.Screen name="Cart" component={CartScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
+        <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
+        <Stack.Screen name="Category Products" component={CategoryProductsScreen} />
+        <Stack.Screen name="Product" component={Product} />
+      </Stack.Navigator>
       {/* <Cat />
       <View style={styles.container}>
       <Text onPress={this.abc} style={styles.xyz}>kkk</Text>
