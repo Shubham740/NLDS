@@ -70,7 +70,7 @@ render(){
   return (
      <NavigationContainer
      >
-      <Stack.Navigator initialRouteName="LoginScreen"
+      <Stack.Navigator initialRouteName="NeedLife Store"
       headerMode='none'
       >
         

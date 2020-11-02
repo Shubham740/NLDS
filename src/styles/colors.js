@@ -14,7 +14,8 @@ export const BLACK = '#000000';
  export const GRAY_LIGHT = '#e6e6e6';
  export const GRAY_MEDIUM = '#cacaca';
  export const GRAY_DARK = '#8a8a8a';
-
+ export const LANDING_PAGE_COLOR='#F8F8F8'
+export const LIGHT_BLACK='#2F2F2F'
 
  	
 

@@ -16,7 +16,12 @@ const STRINGS={
     RESEND_OTP:'Resend Otp',
     PLEASE_ENTER_VALID_OTP:'Please enter valid Otp',
     ENTER_YOUR_MOBILE_NUMBER_FOR_SIGNUP:'Enter your mobile number for sign up',
-    SIGN_UP:'Sign Up'
+    SIGN_UP:'Sign Up',
+    VIEW_ALL:'View All',
+    EXPLORE_BY_CATEGORY:'Explore by category',
+    DAILY_ESSENTIAL:'Daily Essential',
+    BEST_DEAL_FOR_YOU:'Best Deals for you',
+    MORE_DISCOUNT:'More Discounts'
 
 }
 export default STRINGS;
