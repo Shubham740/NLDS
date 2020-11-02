@@ -9,9 +9,7 @@ const ApiHelper = {
             "Content-Type": "application/json",
             // authorization: AppSingleton.getInstance().appToken
           };
-     
          console.log("url ==>>",BASE_URL + url,"  body==",body);
-     
          return fetch(BASE_URL + url, {
           method: "POST",
           body: body,

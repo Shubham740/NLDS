@@ -14,6 +14,9 @@ const STRINGS={
     ENTER_FOUR_DIGIT_VERIFICATION:'Enter 4 digit verification code sent to your Number',
     VERIFY:'Verify',
     RESEND_OTP:'Resend Otp',
-    PLEASE_ENTER_VALID_OTP:'Please enter valid Otp'
+    PLEASE_ENTER_VALID_OTP:'Please enter valid Otp',
+    ENTER_YOUR_MOBILE_NUMBER_FOR_SIGNUP:'Enter your mobile number for sign up',
+    SIGN_UP:'Sign Up'
+
 }
 export default STRINGS;

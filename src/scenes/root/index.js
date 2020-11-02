@@ -15,6 +15,7 @@ import CategoryProductsScreen from '../category products'
 import Product from '../product'
 import LoginScreen from '../login/LoginScreen'
 import OtpVerification from '../otpVerify/OtpVerification'
+import {SignUpScreen} from '../signup'
 import {
   Image,
   SafeAreaView,
@@ -67,11 +68,15 @@ export default class Root extends Component {
 render(){
   
   return (
-     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LoginScreen">
+     <NavigationContainer
+     >
+      <Stack.Navigator initialRouteName="LoginScreen"
+      headerMode='none'
+      >
+        
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
       <Stack.Screen name="OtpVerification" component={OtpVerification} />
-
         <Stack.Screen name="NeedLife Store" component={HomeScreen} />
         <Stack.Screen name="Categories" component={CategoriesScreen} />
         <Stack.Screen name="Services" component={ServicesScreen} />

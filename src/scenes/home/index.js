@@ -16,7 +16,6 @@ import ServicesScreen from '../services';
 import ConsultancyScreen from '../consultancy';
 //import { Ionicons } from '@expo/vector-icons';
 
-
 const Tab = createBottomTabNavigator();
 
 class HomeScreen extends Component { 
@@ -79,31 +78,7 @@ class HomeScreen extends Component {
       <Tab.Screen name="Services" component={ServicesScreen}/> 
       <Tab.Screen name="Consultancy" component={ConsultancyScreen}/>
     </Tab.Navigator> 
-      // <View style={styles.container}> 
-      //   <Text>Home screen</Text>
-      //   <View style={styles.container}>
-      //           <Button
-      //               onPress={this.props.increment}
-      //               title="Increase Count"
-      //               color="#841584"
-      //               accessibilityLabel="Increase Count"
-      //           />
-      //             <Text>{count}</Text>
-      //           <Button
-      //               onPress={this.props.decrement}
-      //               title="Decrease Count"
-      //               color="#841584"
-      //               accessibilityLabel="Decrease Count"
-      //           />
-                
-      //       </View>
-      //   <Button
-      //     title="About"
-      //     onPress={() =>
-      //       this.props.navigation.navigate('About')
-      //     }
-      //   />
-      // </View> 
+    
     ); 
   } 
 

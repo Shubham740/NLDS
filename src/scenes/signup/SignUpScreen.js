@@ -13,12 +13,12 @@ import {Loader} from '../../components/atoms/loader/Loader';
 import NetInfo from '@react-native-community/netinfo';
 import {img_path} from '../../constant/images';
 import STRINGS from '../../constant/STRINGS.js';
-import styles from './LoginStyles';
+import styles from './SignUpStyles';
 const LOGIN_SCREEN_ERROR = 'LoginScreenError=>>>';
 const LOGIN_SCREEN_RESPONSE = 'LoginScreenResponse=>>>>';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
-export default class LoginScreen extends Component {
+export default class SignUpScreen extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -48,7 +48,7 @@ export default class LoginScreen extends Component {
         />
         <Text style={styles.welcomeTextStyle}>{STRINGS.WELCOME}</Text>
         <Text style={styles.enterMobileNumberTextStyle}>
-          {STRINGS.ENTER_YOUR_MOBILE_NUMBER_TO_LOGIN}
+          {STRINGS.ENTER_YOUR_MOBILE_NUMBER_FOR_SIGNUP}
         </Text>
 
         <View style={styles.phoneNumberViewStyle}>
@@ -88,21 +88,13 @@ export default class LoginScreen extends Component {
           onPress={() => {
             this.validateForm();
           }}>
-          <Text style={styles.loginTextStyle}>{STRINGS.LOGIN}</Text>
+          <Text style={styles.loginTextStyle}>{STRINGS.SIGN_UP}</Text>
         </TouchableOpacity>
 
-        <Text style={styles.firstTimeUserTextStyle}>
-          {STRINGS.FIRST_TIME_USER}
-        </Text>
+        
 
         <Loader isLoading={this.state.isLoading} />
-        <TouchableOpacity
-          style={styles.signUpHereTouchableStyle}
-          onPress={() => {
-            this.props.navigation.navigate('SignUpScreen')
-          }}>
-          <Text style={styles.signUpHereTextStyle}>{STRINGS.SIGN_UP_HERE}</Text>
-        </TouchableOpacity>
+       
       </KeyboardAwareScrollView>
     );
   }
