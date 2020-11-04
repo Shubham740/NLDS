@@ -122,20 +122,59 @@ export default class LandingScreen extends Component {
   renderMoreDiscountItem = (item, index) => {
     if (index <= 3) {
       return (
-        <TouchableOpacity style={styles.moreDiscountTouchableStyle}>
-          <Image
-            style={{height: 79, width: 46, backgroundColor: 'green'}}
-            source={img_path.FLAT}></Image>
-          <View style={{marginLeft: 10}}>
-            <View style={styles.discountOffViewStyle}>
-              <Text style={styles.discountOffTextStyle}> 12 % off</Text>
+        <View>
+          <TouchableOpacity style={styles.moreDiscountTouchableStyle}>
+            <Image
+              style={{height: 79, width: 46, backgroundColor: 'green'}}
+              source={img_path.FLAT}></Image>
+            <View style={{marginLeft: 10}}>
+              <View style={styles.discountOffViewStyle}>
+                <Text style={styles.discountOffTextStyle}> 12 % off</Text>
+              </View>
+
+              <Text style={styles.discountTitleStyle}>Deodrant</Text>
+
+              <Text style={styles.discountOffStyle}> 12 % off</Text>
             </View>
+          </TouchableOpacity>
+        </View>
+      );
+    } else {
+      return <View />;
+    }
+  };
 
-            <Text style={styles.discountTitleStyle}>Deodrant</Text>
+  renderBestDeal = (item, index) => {
+    if (index <= 3) {
+      return (
+        <View>
+          <TouchableOpacity style={styles.bestDealViewStyle}>
+            <Image
+              style={{height: 97, width: 161, backgroundColor: 'green'}}
+              source={img_path.FLAT}></Image>
+            <View style={{alignItems:'center', width:200}}>
+              <View style={styles.bestDealDiscountOffStyle}>
+                <Text style={styles.discountOffTextStyle}> 12 % off</Text>
+              </View>
 
-            <Text style={styles.discountOffStyle}> 12 % off</Text>
-          </View>
-        </TouchableOpacity>
+              <Text style={styles.bestDealTitleStyle}
+              numberOfLines={2}
+              > Parle Real Elaichi Premium Rusk 273g</Text>
+
+              <Text style={styles.mrpStyle}> M.R.P Rs 20</Text>
+            </View>
+          </TouchableOpacity>
+          <FlatList
+            style={{marginHorizontal: 20}}
+            data={this.state.categoryList}
+            renderItem={({itemValue, indexValue}) =>
+              this.renderDailyEssential(itemValue, indexValue)
+            }
+            horizontal={true}
+            keyExtractor={(itemValue, indexValue) => itemValue + indexValue.toString}
+            showsHorizontalScrollIndicator={false}
+          />
+        </View>
       );
     } else {
       return <View />;
@@ -198,6 +237,10 @@ export default class LandingScreen extends Component {
           />
         </View>
         <LandingPageTitle title={STRINGS.BEST_DEAL_FOR_YOU} />
+        <View style={[styles.moreDiscountViewStyle, {marginBottom: 0}]}>
+          {this.renderBestDeal(null, 0)}
+        </View>
+
         <LandingPageTitle title={STRINGS.MORE_DISCOUNT} />
 
         <View style={styles.moreDiscountViewStyle}>

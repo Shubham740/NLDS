@@ -123,6 +123,32 @@ const styles = StyleSheet.create({
     marginTop:Utils.getHeightScale(6),
     fontSize:14,
     fontFamily:Utils.fonts.regular
+  },
+  bestDealViewStyle:{
+    width: Dimensions.get('window').width  - 20,
+    flexDirection: 'row',
+    paddingHorizontal: Utils.getWidthScale(10),
+    alignItems: 'center',
+  },
+  bestDealDiscountOffStyle:{
+     padding: 5,
+    backgroundColor: 'green',
+    width: 80,
+    alignItems: 'center',
+    borderRadius: 15,
+  },
+  bestDealTitleStyle:{
+    width:120,
+    textAlign: 'center',
+    letterSpacing: 0.5,
+    fontSize: 14,
+    fontFamily: Utils.fonts.bold,
+    color: Colors.BLACK,
+    marginTop:Utils.getHeightScale(6)
+  },
+  mrpStyle:{
+        fontSize:12, 
+        fontFamily:Utils.fonts.regular,
   }
 });
 
