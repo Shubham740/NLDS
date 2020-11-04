@@ -1,11 +1,11 @@
 const { StyleSheet } = require("react-native");
 import {Colors} from '../../../styles';
-import {fonts} from '../../../constant/Utils';
+import {Utils} from '../../../constant/';
 
 const styles = StyleSheet.create({
     viewAllTextStyle: {
         fontSize: 12,
-        fontFamily: fonts.bold,
+        fontFamily: Utils.fonts.bold,
         color: Colors.LIGHT_BLACK,
       },
       viewAllTouchableStyle: {alignSelf: 'flex-end', padding: 15, marginRight: 20},
@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
       },
       exploreCategoryTextStyle: {
         marginLeft: 20,
-        fontFamily: fonts.bold,
-        color: Colors.BLACK,
+        fontFamily: Utils.fonts.bold,
+        color: Colors.LANDING_PAG_TITLE_SCREEN,
         fontSize: 14,
       },
 })
