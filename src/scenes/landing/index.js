@@ -119,13 +119,28 @@ export default class LandingScreen extends Component {
     );
   };
 
-    renderMoreDiscountItem=()=>{
-      return(<TouchableOpacity
-      style={{width:Dimensions.get('window').width/2-20, backgroundColor:'red', height:100}}
-      >
+  renderMoreDiscountItem = (item, index) => {
+    if (index <= 3) {
+      return (
+        <TouchableOpacity style={styles.moreDiscountTouchableStyle}>
+          <Image
+            style={{height: 79, width: 46, backgroundColor: 'green'}}
+            source={img_path.FLAT}></Image>
+          <View style={{marginLeft: 10}}>
+            <View style={styles.discountOffViewStyle}>
+              <Text style={styles.discountOffTextStyle}> 12 % off</Text>
+            </View>
 
-      </TouchableOpacity>)
+            <Text style={styles.discountTitleStyle}>Deodrant</Text>
+
+            <Text style={styles.discountOffStyle}> 12 % off</Text>
+          </View>
+        </TouchableOpacity>
+      );
+    } else {
+      return <View />;
     }
+  };
 
   renderDailyEssential = (item, index) => {
     return (
@@ -185,18 +200,17 @@ export default class LandingScreen extends Component {
         <LandingPageTitle title={STRINGS.BEST_DEAL_FOR_YOU} />
         <LandingPageTitle title={STRINGS.MORE_DISCOUNT} />
 
-        <View
-          style={styles.moreDiscountViewStyle}>
+        <View style={styles.moreDiscountViewStyle}>
           <FlatList
             data={this.state.categoryList}
             renderItem={({item, index}) =>
               this.renderMoreDiscountItem(item, index)
             }
-              numColumns={2}
+            numColumns={2}
             keyExtractor={(item, index) => item + index.toString}
             showsHorizontalScrollIndicator={false}
           />
-          </View>
+        </View>
       </ScrollView>
     );
   }

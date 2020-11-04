@@ -22,6 +22,14 @@ const myHeight = Dimensions.get('window').height;
       }
       return dummyList;
   }
+  export function getDummyDiscountList(){
+    let dummyList = [];
+      for(let count =0 ;count<100; count++){
+        dummyList.push(count)
+      }
+      return dummyList;
+  }
+
 
   /**
  * this method is used to get the width scale

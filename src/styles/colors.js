@@ -18,7 +18,7 @@ export const BLACK = '#000000';
 export const LIGHT_BLACK='#2F2F2F'
 export const LANDING_PAG_TITLE_SCREEN='#2F2F2F'
 export const DAILY_ESSENTIAL_TEXT_STYLE='#121212'
-
+export const RED_COLOR='#BE0D0D'
  	
 
 

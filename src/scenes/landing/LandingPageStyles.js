@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     width: Utils.getWidthScale(100),
     marginRight: 20,
     backgroundColor: Colors.WHITE,
-    justifyContent:'center',
+    justifyContent: 'center',
     borderRadius: 12,
     alignItems: 'center',
   },
@@ -74,19 +74,55 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     fontFamily: Utils.fonts.regular,
   },
-  offTextStyle:{
-    fontSize:12,
-    fontFamily:Utils.fonts.bold,
-    color:Colors.DAILY_ESSENTIAL_TEXT_STYLE
+  offTextStyle: {
+    fontSize: 12,
+    fontFamily: Utils.fonts.bold,
+    color: Colors.DAILY_ESSENTIAL_TEXT_STYLE,
   },
-  moreDiscountViewStyle:{
+  moreDiscountViewStyle: {
     width: Dimensions.get('window').width - 40,
-   minHeight:getHeightScale(200),
+    minHeight: getHeightScale(200),
     backgroundColor: 'white',
     alignSelf: 'center',
-    borderRadius:12,
-    marginTop:10,
-    marginBottom:150,
+    borderRadius: 12,
+    marginTop: 10,
+    marginBottom: 150,
+  },
+  moreDiscountTouchableStyle: {
+    width: Dimensions.get('window').width / 2 - 20,
+    flexDirection: 'row',
+    paddingHorizontal: Utils.getWidthScale(10),
+    alignItems: 'center',
+    justifyContent:'center'
+  },
+  discountOffTextStyle: {
+    color: 'white',
+    fontSize: 11,
+    fontFamily: Utils.fonts.bold,
+  },
+  discountOffViewStyle: {
+    padding: 5,
+    backgroundColor: 'green',
+    width: 80,
+    marginTop:Utils.getHeightScale(10),
+    alignItems: 'center',
+    borderRadius: 20,
+  },
+
+  discountTitleStyle: {
+    textAlign: 'center',
+    letterSpacing: 1,
+    fontSize: 14,
+    fontFamily: Utils.fonts.regular,
+    color: Colors.BLACK,
+    marginTop:Utils.getHeightScale(6)
+  },
+  discountOffStyle:{
+    color:Colors.RED_COLOR,
+    textAlign:'center',
+    marginTop:Utils.getHeightScale(6),
+    fontSize:14,
+    fontFamily:Utils.fonts.regular
   }
 });
 
