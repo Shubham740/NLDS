@@ -46,4 +46,12 @@ export function getHeightScale(dimensions) {
   return (dimensions / STANDARD_HEIGHT) * myHeight;
 }
 
+export function getHeader(){
+  let  headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+  } 
+  return headers;
+}
+
 

@@ -21,7 +21,8 @@ const STRINGS={
     EXPLORE_BY_CATEGORY:'Explore by category',
     DAILY_ESSENTIAL:'Daily Essential',
     BEST_DEAL_FOR_YOU:'Best Deals for you',
-    MORE_DISCOUNT:'More Discounts'
+    MORE_DISCOUNT:'More Discounts',
+    CREATE_ACCOUNT:'Create an account'
 
 }
 export default STRINGS;

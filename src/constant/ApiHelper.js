@@ -1,27 +1,34 @@
 
-import axios from 'axios'
-
-const BASE_URL='http://ec2-3-15-42-254.us-east-2.compute.amazonaws.com:8080/'
+import {ApiUrls, Utils} from '../constant'
 const ApiHelper = {
     fetchPostWithoutToken:function(url, body){
-        let  headers = {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-            // authorization: AppSingleton.getInstance().appToken
-          };
-         console.log("url ==>>",BASE_URL + url,"  body==",body);
-         return fetch(BASE_URL + url, {
+         console.log("url ==>>",ApiUrls.BASE_URL + url,"  body==",body);
+         return fetch(ApiUrls.BASE_URL + url, {
           method: "POST",
           body: body,
-          headers: headers
+          headers:Utils.getHeader() ,
         }).then(response=>response.json()).
           then(responseJson=>{
             return responseJson;
         }).catch((error) => {
           console.log('error=>>>', error);
         });
-    
-    
+      },
+
+      fetchGet: function (url) {
+        console.log('url ==' + ApiUrls.BASE_URL + url)
+       
+        return fetch(ApiUrls.BASE_URL + url,
+          {
+            method: 'GET',
+            headers:Utils.getHeader() ,
+          }).then((response) => response.json()).then((responseJson) => {
+            console.log('response', responseJson)
+            return responseJson;
+          }).catch((error) => {
+            alert("Network error.");
+            console.error(error);
+          });
       },
 }
 
