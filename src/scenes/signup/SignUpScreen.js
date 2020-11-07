@@ -100,7 +100,9 @@ export default class SignUpScreen extends Component {
   }
   validateForm = () => {
     if (this.state.phoneNumber.trim().length == 10) {
-      this.callLoginApi();
+      this.props.navigation.navigate('SignUpScreen2',{
+        phoneNumber:this.state.phoneNumber
+      })
     } else {
       SimpleToast.show(STRINGS.PLEASE_ENTER_VALID_PHONE_NUMBER);
     }

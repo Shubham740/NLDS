@@ -54,4 +54,22 @@ export function getHeader(){
   return headers;
 }
 
+export function getStateListForDropDown(stateList){
+  let stateDropDownList=[]
+  for(let count =0 ;count<stateList.length;count++){
+    stateDropDownList.push({value:stateList[count].name})
+  }
+  return stateDropDownList;
+}
+
+export function getSelectedStateIndex(list, selectedText){
+  let selectedIndex =-1;
+  for(let count =0 ; count<list.length; count++){
+      if(list[count].name==selectedText){
+        selectedIndex= list[count].id
+        break;
+      }
+  }
+  return selectedIndex;
+}
 

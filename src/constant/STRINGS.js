@@ -22,7 +22,10 @@ const STRINGS={
     DAILY_ESSENTIAL:'Daily Essential',
     BEST_DEAL_FOR_YOU:'Best Deals for you',
     MORE_DISCOUNT:'More Discounts',
-    CREATE_ACCOUNT:'Create an account'
+    CREATE_ACCOUNT:'Create an account',
+    PLEASE_SELECT_STATE:'Please select state',
+    PLEASE_SELECT_CITY:'Please select city',
+    PLEASE_ENTER_PIN_CODE:'Please enter pincode'
 
 }
 export default STRINGS;
