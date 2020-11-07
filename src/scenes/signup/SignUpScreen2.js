@@ -127,7 +127,6 @@ export default class SignUpScreen2 extends Component {
                     this.setState({pinCode:text})
                 }}
                 />
-
                 <View
                 style={[
                   styles.lineStyle,
@@ -139,14 +138,10 @@ export default class SignUpScreen2 extends Component {
               />
       </View>
               }
-
-                
-                
-        
         <Loader isLoading={this.state.isLoading} />
         <NldsButton
           title={STRINGS.SIGN_UP}
-          containerStyle={{marginTop: Utils.getHeightScale(49), position:'absolute', marginTop:((Dimensions.get('window').height/5)*4)}}
+          containerStyle={{ position:'absolute', marginTop:((Dimensions.get('window').height/5)*4)}}
           callback={()=>{
            if( this.validateForm()==true){
              this.signUpApi()

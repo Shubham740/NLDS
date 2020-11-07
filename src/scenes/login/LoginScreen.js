@@ -113,41 +113,5 @@ export default class LoginScreen extends Component {
       SimpleToast.show(STRINGS.PLEASE_ENTER_VALID_PHONE_NUMBER);
     }
   };
-  callLoginApi = () => {
-    NetInfo.fetch()
-      .then((state) => {
-        if (state.isConnected) {
-          const body = JSON.stringify({
-            phone_number: this.state.phoneNumber,
-            country_code: STRINGS.COUNTRY_CODE,
-          });
-          this.setState({isLoading: true});
-          ApiHelper.fetchPostWithoutToken('account/register/', body)
-            .then((response) => {
-              this.setState({isLoading: false});
-              console.log(LOGIN_SCREEN_RESPONSE, response);
-              if (response != undefined) {
-                if (response.success == true) {
-                  SimpleToast.show(response.data.message);
-                  this.props.navigation.navigate('OtpVerification',{
-                    phoneNumber:this.state.phoneNumber
-                  })
-                } else {
-                  SimpleToast.show(response.errors.message);
-                }
-              } else {
-                SimpleToast.show(STRINGS.SERVER_ERROR);
-              }
-            })
-            .catch((error) => {
-              console.log(LOGIN_SCREEN_ERROR, error);
-            });
-        } else {
-          SimpleToast.show(STRINGS.PLEASE_PROVIDE_THE_INTERNET_CONNECTION);
-        }
-      })
-      .catch((error) => {
-        console.log('error=>>>', error);
-      });
-  };
+  
 }
