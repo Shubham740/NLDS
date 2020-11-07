@@ -68,7 +68,7 @@ export default class Root extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="SignUpScreen" headerMode="none">
+        <Stack.Navigator initialRouteName="NeedLife Store" headerMode="none">
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
           <Stack.Screen name="SignUpScreen2" component={SignUpScreen2} />

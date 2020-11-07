@@ -8,14 +8,10 @@ import {
   TextInput,
 } from 'react-native';
 import SimpleToast from 'react-native-simple-toast';
-import {ApiHelper} from '../../constant';
 import {Loader} from '../../components/atoms/loader/Loader';
-import NetInfo from '@react-native-community/netinfo';
 import {img_path} from '../../constant/images';
 import STRINGS from '../../constant/STRINGS.js';
 import styles from './LoginStyles';
-const LOGIN_SCREEN_ERROR = 'LoginScreenError=>>>';
-const LOGIN_SCREEN_RESPONSE = 'LoginScreenResponse=>>>>';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 export default class LoginScreen extends Component {

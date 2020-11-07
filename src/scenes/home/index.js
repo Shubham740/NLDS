@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {Alert, Button, StyleSheet} from 'react-native';
-import {SafeAreaView, Text,View,TouchableOpacity,TextInput} from 'react-native';
+import {Alert, Button, StyleSheet,Platform, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import axios from 'axios';
 import { Get_All_CATEGORIES_URL } from '../../constant/api';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions/types';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Utils} from '../../constant'
 
 import LandingScreen from '../landing'
 import ShopScreen from '../shop';
@@ -14,69 +13,45 @@ import CartScreen from '../cart';
 import AccountScreen from '../account';
 import ServicesScreen from '../services';
 import ConsultancyScreen from '../consultancy';
-//import { Ionicons } from '@expo/vector-icons';
-
+import {img_path} from '../../constant'
 const Tab = createBottomTabNavigator();
 
-class HomeScreen extends Component { 
-  constructor(props) {
-    super(props)
-   // console.log("hi1")
-    //console.log(props)
-  } 
-  
-  decrease = () => {
-   
-    //https://github.com/axios/axios
-
-  // axios.get(Get_All_CATEGORIES_URL)
-  // .then(response => {
-  //   if(response.status == 200){
-  //     console.log(response.data)
-  //   }
-  // })
-  // .catch(error => {
-  //   console.log(error);  
-  // });
-
-  }
-
-  increase = () => {}
- 
+export default class HomeScreen extends Component { 
   render() {
-    const { count } = this.props; 
     return (
       <Tab.Navigator screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-
-          if (route.name === 'NLDS') {
-            iconName = 'home'
-            color = '#FF8C00'
+          if (route.name === 'Home') {
+            iconName = img_path.HOME
           } 
-          else if (route.name === 'Shop') {
-            iconName = 'times'
-            color = '#FF8C00'
+          else if (route.name === 'Categories') {
+            iconName = img_path.CATEGORY
           }
-          else if (route.name === 'Services') {
-            iconName = 'apple'
-            color = '#FF8C00'
+          else if (route.name === 'Cart') {
+            iconName = img_path.CART
           }
-          else if (route.name === 'Consultancy') {
-            iconName = 'trophy'
-            color = '#FF8C00'
+          else if (route.name === 'Account') {
+            iconName = img_path.ACCOUNT
           }
-          return <Icon name={iconName} size={size} color={color} />;  
+          return <Image source={iconName} 
+          resizeMode={'contain'}
+          size={20} color={color} />;  
         },
       })}
       tabBarOptions={{
         activeTintColor: '#FF8C00',
         inactiveTintColor: 'black',
+        keyboardHidesTabBar: Platform.OS == 'android' ? true : false,
+        labelStyle: {
+          fontSize: 12,
+          fontFamily:Utils.fonts.regular
+        }
       }}>
-      <Tab.Screen name="NLDS" component={LandingScreen} />
-      <Tab.Screen name="Shop" component={ShopScreen} />
-      <Tab.Screen name="Services" component={ServicesScreen}/> 
-      <Tab.Screen name="Consultancy" component={ConsultancyScreen}/>
+      <Tab.Screen name="Home" component={LandingScreen} />
+      <Tab.Screen name="Categories" component={ShopScreen} />
+      <Tab.Screen name="Cart" component={ServicesScreen}/> 
+      <Tab.Screen name="Account" component={ConsultancyScreen}/>
     </Tab.Navigator> 
     
     ); 
@@ -86,27 +61,8 @@ class HomeScreen extends Component {
 
 
 
-const styles = StyleSheet.create({ 
-    container: { 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-    } 
-  });
 
 
-const mapStateToProps = (state) => ({
-  count: state.hmr.count
-});
 
-const mapDispatchToProps = (dispatch) => ({
- increment: () => { 
-   //console.log("hi2")
-   return dispatch({type: Actions.COUNTER_INCREMENT})
- },
- decrement: () => dispatch({type: Actions.COUNTER_DECREMENT}),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
 
 
